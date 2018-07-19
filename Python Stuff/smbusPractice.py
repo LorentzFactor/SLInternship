@@ -35,7 +35,7 @@ class Sensor(object):
                 self.dataArray = [self.getDeviceData()]
             else:
                 self.dataArray.append(self.getDeviceData())
-                self.timeCodeArray.append(datetime.datetime.now())
+            self.timeCodeArray.append(datetime.datetime.now())
             time.sleep(self.collectionRate)
             
 class Accelerometer(Sensor):
