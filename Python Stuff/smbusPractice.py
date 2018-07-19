@@ -31,12 +31,12 @@ class Sensor(object):
     
     def updateArrays(self):
         while self.running:
+            time.sleep(self.collectionRate)
             if(len(self.dataArray)==0):
                 self.dataArray = [self.getDeviceData()]
             else:
                 self.dataArray.append(self.getDeviceData())
             self.timeCodeArray.append(datetime.datetime.now())
-            time.sleep(self.collectionRate)
             
 class Accelerometer(Sensor):
     def getDeviceData(self):
