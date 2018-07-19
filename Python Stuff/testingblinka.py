@@ -13,7 +13,7 @@ def main():
     try:
         time.sleep(1)
         while True:
-            time.sleep(3)
+            time.sleep(30)
             print("")
             print("Time: " + str(dht11.timeCodeArray[-1]))
             print("Humidity(%) Temperature(C): " + str(dht11.dataArray[-1]))
